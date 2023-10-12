@@ -4,7 +4,7 @@ import React from "react";
 import groovyWalkAnimation from "../../../../animation.json";
 const LottieSection = () => {
   return (
-    <div className="border bg-white h-full flex max-w-[890px] mt-5">
+    <div className="border bg-white h-full sm:flex max-w-[890px] mt-5">
       <div className="basis-3/5 flex justify-center">
         <Lottie
           animationData={groovyWalkAnimation}

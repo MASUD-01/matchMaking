@@ -67,39 +67,19 @@ export const religion: { name: string; value: string }[] = [
     name: "Muslim",
     value: "muslim",
   },
-  {
-    name: "Christian",
-    value: "christian",
-  },
-  {
-    name: "Sikh",
-    value: "sikh",
-  },
-  {
-    name: "Parsi",
-    value: "parsi",
-  },
-  {
-    name: "Jain",
-    value: "jain",
-  },
-  {
-    name: "Buddhist",
-    value: "buddhist",
-  },
 ];
 export const livingCountry: { name: string; value: string }[] = [
   {
-    name: "usa",
-    value: "usa",
+    name: "UAE",
+    value: "UAE",
   },
   {
     name: "Bangladesh",
     value: "Bangladesh",
   },
   {
-    name: "canada",
-    value: "canada",
+    name: "India",
+    value: "India",
   },
 ];
 export const communityList: { name: string; value: string }[] = [
@@ -113,7 +93,7 @@ export const communityList: { name: string; value: string }[] = [
   },
   {
     name: "Bangali",
-    value: "Bangali",
+    value: "Bengali",
   },
 
   {
@@ -205,20 +185,11 @@ export const educationList: { name: string; value: string }[] = [
     value: "B.Eng(Hons)",
   },
 ];
-export const workCompanyList: { name: string; value: string }[] = [
-  {
-    name: "Private Company",
-    value: "Private Company",
-  },
-  {
-    name: "Government /Public sector",
-    value: "Government /Public sector",
-  },
+export const occupationlist: { name: string; value: string }[] = [
   {
     name: "Defence",
     value: "Defence",
   },
-
   {
     name: "Civil Service",
     value: "Civil Service",
@@ -264,7 +235,7 @@ export const incomeList: { name: string; value: string }[] = [
 export const languageList: { name: string; value: string }[] = [
   {
     name: "English",
-    value: "english",
+    value: "English",
   },
   {
     name: "Bangali",

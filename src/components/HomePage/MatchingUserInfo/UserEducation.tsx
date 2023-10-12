@@ -1,7 +1,7 @@
 import {
   educationList,
   incomeList,
-  workCompanyList,
+  occupationlist,
 } from "@/constants/constants";
 import { Button, Col, Form, Input, Row, Select } from "antd";
 import React from "react";
@@ -68,7 +68,7 @@ const UserEducation = ({
                 showSearch
                 placeholder="Your work with"
                 optionFilterProp="children"
-                options={workCompanyList}
+                options={occupationlist}
                 style={{ width: "100%" }}
                 size="large"
               />
@@ -88,7 +88,7 @@ const UserEducation = ({
                 showSearch
                 placeholder="Your Profession"
                 optionFilterProp="children"
-                options={workCompanyList}
+                options={occupationlist}
                 style={{ width: "100%" }}
                 size="large"
               />
@@ -116,20 +116,20 @@ const UserEducation = ({
         <Row justify={"center"}>
           <Col>
             <Form.Item label={" "}>
-              <button
-                type="submit"
-                className="border px-[25px] py-[4px] rounded-md hover:text-blue-500 hover:border-blue-500"
-              >
-                Next
-              </button>
+              <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
+                Previous
+              </Button>
             </Form.Item>
           </Col>
           <Col>
             <Form.Item label={" "}>
               <div>
-                <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
-                  Previous
-                </Button>
+                <button
+                  type="submit"
+                  className="border px-[25px] py-[4px] rounded-md hover:text-blue-500 hover:border-blue-500"
+                >
+                  Next
+                </button>
               </div>
             </Form.Item>
           </Col>

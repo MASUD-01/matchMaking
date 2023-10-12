@@ -11,7 +11,6 @@ import EditFamily from "./EditFamily/EditFamily";
 import EditEducationCareer from "./EditEducationCareer/EditEducationCareer";
 import EditLocation from "./EditLocation/EditLocation";
 import EditAboutMyself from "./EditAboutMyself/EditAboutMyself";
-import "./EditMyPro.css";
 import EditReligionAgain from "./EditReligion/EditReligion";
 const { Option } = Select;
 

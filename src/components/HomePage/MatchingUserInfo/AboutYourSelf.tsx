@@ -22,7 +22,7 @@ const AboutYourSelf = ({
         style={{ width: "100%" }}
       >
         <Form.Item
-          name={["selfDescribe", "aboutYourself"]}
+          name={"about_me"}
           label="About Yourself"
           rules={[{ required: true, message: "aboutSelf field is required" }]}
         >
@@ -31,20 +31,20 @@ const AboutYourSelf = ({
         <Row justify={"center"}>
           <Col>
             <Form.Item label={" "}>
-              <button
-                type="submit"
-                className="border px-[25px] py-[4px] rounded-md hover:text-blue-500 hover:border-blue-500"
-              >
-                Next
-              </button>
+              <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
+                Previous
+              </Button>
             </Form.Item>
           </Col>
           <Col>
             <Form.Item label={" "}>
               <div>
-                <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
-                  Previous
-                </Button>
+                <button
+                  type="submit"
+                  className="border px-[25px] py-[4px] rounded-md hover:text-blue-500 hover:border-blue-500"
+                >
+                  Next
+                </button>
               </div>
             </Form.Item>
           </Col>

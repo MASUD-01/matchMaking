@@ -51,7 +51,7 @@ const Venue = () => {
               className="transition-transform transform scale-100 group-hover:scale-110"
             />
             <h1 className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 bg-opacity-75 bg-black transition-opacity duration-300 text-2xl font-bold">
-              Your Text Here
+              {item.name}
             </h1>
           </div>
         ))}

@@ -20,8 +20,11 @@ const ProfileInfo = () => {
   }
 
   return (
-    <div className="mx-32 mt-5 ">
-      <Card bordered className="w-80 flex flex-col justify-center items-center">
+    <div className="mt-5">
+      <Card
+        bordered
+        className="w-full sm:w-80 flex flex-col justify-center items-center"
+      >
         <div className="w-80 flex flex-col justify-center items-center">
           <div className="mb-5 bg-slate-400 rounded-full ">
             {file ? (

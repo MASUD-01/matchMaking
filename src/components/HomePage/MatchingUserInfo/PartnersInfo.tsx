@@ -1,7 +1,15 @@
-import { ageList, livingCountry, religion } from '@/constants/constants';
-import { Button, Col, Form, Row, Select } from 'antd';
-import React from 'react';
-import { ArrowRightOutlined } from '@ant-design/icons';
+import {
+  ageList,
+  communityList,
+  educationList,
+  languageList,
+  livingCountry,
+  religion,
+  occupationlist,
+} from "@/constants/constants";
+import { Col, Form, Row, Select } from "antd";
+import React from "react";
+import { ArrowRightOutlined } from "@ant-design/icons";
 const PartnersInfo = ({
   onFinish,
   initialValue,
@@ -13,128 +21,203 @@ const PartnersInfo = ({
   return (
     <div>
       <Form
-        name='basic'
+        name="basic"
         initialValues={initialValue}
         onFinish={onFinish}
-        autoComplete='off'
-        layout='vertical'
-        style={{ width: '100%' }}
+        autoComplete="off"
+        layout="vertical"
+        style={{ width: "100%" }}
       >
-        <Row
-          gutter={[5, 5]}
-          justify={'center'}
-        >
+        <Row gutter={[5, 5]} justify={"center"}>
           <Col lg={5}>
             <Form.Item
-              label={'looking for'}
-              name={['partners', 'gender']}
+              label={"looking for"}
+              name={["partners", "desired_gender"]}
               required
-              rules={[{ required: true, message: 'gender field is required' }]}
+              rules={[{ required: true, message: "gender field is required" }]}
             >
               <Select
                 showSearch
                 allowClear
-                placeholder='Select a person'
-                optionFilterProp='children'
+                placeholder="Select a person"
+                optionFilterProp="children"
                 options={[
                   {
-                    label: 'Male',
-                    value: 'male',
+                    label: "Male",
+                    value: "Male",
                   },
                   {
-                    label: 'Female',
-                    value: 'female',
+                    label: "Female",
+                    value: "Female",
                   },
                 ]}
-                style={{ width: '100%', outlineColor: 'none' }}
+                style={{ width: "100%", outlineColor: "none" }}
               />
             </Form.Item>
           </Col>
           <Col lg={3}>
             <Form.Item
-              label={'Select age'}
-              name={['partners', 'from_age']}
-              rules={[{ required: true, message: 'age field is required' }]}
+              label={"Select age"}
+              name={["partners", "from_age"]}
+              rules={[{ required: true, message: "age field is required" }]}
             >
               <Select
                 allowClear
                 showSearch
-                placeholder='From age'
-                optionFilterProp='children'
+                placeholder="From age"
+                optionFilterProp="children"
                 options={ageList}
-                style={{ width: '100%' }}
+                style={{ width: "100%" }}
               />
             </Form.Item>
           </Col>
 
-          <Col>
-            <Form.Item label={' '}>
-              <ArrowRightOutlined />
+          <Col lg={1}>
+            <Form.Item label={" "}>
+              <div className="flex justify-center">
+                <ArrowRightOutlined />
+              </div>
             </Form.Item>
           </Col>
           <Col lg={3}>
             <Form.Item
-              label={' '}
+              label={" "}
               required={false}
-              name={['partners', 'to_age']}
+              name={["partners", "to_age"]}
               rules={[
                 {
                   required: true,
-                  message: 'age field is required',
+                  message: "age field is required",
                 },
               ]}
             >
               <Select
                 showSearch
                 allowClear
-                placeholder='To age'
-                optionFilterProp='children'
+                placeholder="To age"
+                optionFilterProp="children"
                 options={ageList}
-                style={{ width: '100%' }}
+                style={{ width: "100%" }}
               />
             </Form.Item>
           </Col>
           <Col lg={5}>
             <Form.Item
-              label={'Religion'}
-              name={['partners', 'religion']}
+              label={"Religion"}
+              name={["partners", "desired_religion"]}
               rules={[
-                { required: true, message: 'religion field is required' },
+                { required: true, message: "religion field is required" },
               ]}
             >
               <Select
                 allowClear
                 showSearch
-                placeholder='Select Religion'
-                optionFilterProp='children'
+                placeholder="Select Religion"
+                optionFilterProp="children"
                 options={religion}
-                style={{ width: '100%' }}
+                style={{ width: "100%" }}
               />
             </Form.Item>
           </Col>
           <Col lg={5}>
             <Form.Item
-              label={'Living in'}
-              name={['partners', 'country']}
-              rules={[{ required: true, message: 'country field is required' }]}
+              label={"Living in"}
+              name={["partners", "desired_country"]}
+              rules={[{ required: true, message: "country field is required" }]}
             >
               <Select
                 showSearch
                 allowClear
-                placeholder='Select living'
-                optionFilterProp='children'
+                placeholder="Select living"
+                optionFilterProp="children"
                 options={livingCountry}
-                style={{ width: '100%' }}
+                style={{ width: "100%" }}
+              />
+            </Form.Item>
+          </Col>
+          <Col lg={5}>
+            <Form.Item
+              name={["partners", "desired_community"]}
+              label="Desired Community"
+              required
+              rules={[
+                { required: true, message: "community field is required" },
+              ]}
+            >
+              <Select
+                allowClear
+                showSearch
+                placeholder="Select community"
+                optionFilterProp="children"
+                options={communityList}
+                style={{ width: "100%" }}
+              />
+            </Form.Item>
+          </Col>
+          <Col lg={5}>
+            <Form.Item
+              name={["partners", "desired_occupation"]}
+              label="Occupation"
+              required
+              rules={[
+                { required: true, message: "profession field is required" },
+              ]}
+            >
+              <Select
+                allowClear
+                showSearch
+                placeholder="Your work with"
+                optionFilterProp="children"
+                options={occupationlist}
+                style={{ width: "100%" }}
+              />
+            </Form.Item>
+          </Col>
+          <Col lg={6}>
+            <Form.Item
+              name={["partners", "desired_education"]}
+              label="Desired Qualificfation"
+              required
+              rules={[
+                { required: true, message: "qualification field is required" },
+              ]}
+            >
+              <Select
+                allowClear
+                showSearch
+                placeholder="Select Qualification"
+                optionFilterProp="children"
+                options={educationList}
+                style={{ width: "100%" }}
+              />
+            </Form.Item>
+          </Col>
+          <Col lg={6}>
+            <Form.Item
+              name={["partners", "desired_language"]}
+              label="Preferred Language"
+              required
+              rules={[
+                { required: true, message: "language field is required" },
+              ]}
+            >
+              <Select
+                allowClear
+                showSearch
+                placeholder="Select language"
+                optionFilterProp="children"
+                options={languageList}
+                style={{ width: "100%" }}
               />
             </Form.Item>
           </Col>
         </Row>
         <Row>
           <Col>
-            <Form.Item label={' '}>
+            <Form.Item label={" "}>
               <button
-                type='submit'
-                className='border px-[25px] py-[4px] rounded-md hover:text-blue-500 hover:border-blue-500'
+                type="submit"
+                className="border px-[25px] py-[4px] rounded-md hover:text-blue-500 hover:border-blue-500"
               >
                 Next
               </button>

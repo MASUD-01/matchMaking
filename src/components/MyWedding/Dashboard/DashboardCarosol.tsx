@@ -48,7 +48,7 @@ const DashboardCarosol = () => {
     <div className="h-[320px] my-10 rounded-md">
       <div>
         <Swiper
-          slidesPerView={3}
+          // slidesPerView={3}
           grid={{
             rows: 1,
           }}
@@ -57,10 +57,10 @@ const DashboardCarosol = () => {
             clickable: true,
           }}
           modules={[Grid, Pagination]}
-          className="mySwiper"
+          className="mySwiper w-385 sm:w-[885px]"
           breakpoints={{
-            320: {
-              slidesPerView: 2,
+            400: {
+              slidesPerView: 1,
             },
             640: {
               slidesPerView: 4,

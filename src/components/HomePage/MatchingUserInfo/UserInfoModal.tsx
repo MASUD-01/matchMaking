@@ -1,8 +1,8 @@
 "use client";
 
 import { fonts } from "@/app/fonts";
-import { Button, Col, Form, Modal, Row, Steps, theme } from "antd";
-import React, { useState } from "react";
+import { Button, Col, Modal, Row, Steps, message, theme } from "antd";
+import React, { useEffect, useState } from "react";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import PartnersInfo from "./PartnersInfo";
 import UserInformation from "./UserInformation";
@@ -10,6 +10,10 @@ import UserProfileInfo from "./UserProfileInfo";
 import UserEducation from "./UserEducation";
 import AboutYourSelf from "./AboutYourSelf";
 import { MdOutlineFileDownloadDone } from "react-icons/md";
+import dayjs from "dayjs";
+import { MatchUserInfoType } from "@/types/types";
+import { useUserLoginMutation } from "@/redux/api/authApi";
+import { error } from "console";
 type partners = {
   gender: string;
   from_age: number;
@@ -26,16 +30,16 @@ const UserInfoModal = () => {
   const [formUser, setFormUser] = useState({});
   const [allFormData, setAllFormData] = useState<{
     partners?: {};
-    userField?: {};
+    userField?: MatchUserInfoType;
     userProfile?: {};
     userEdu?: {};
-    selfDescribe?: {};
+    about_me?: string;
   }>({
     partners: {},
-    userField: {},
+    // userField: {},
     userProfile: {},
     userEdu: {},
-    selfDescribe: {},
+    about_me: "",
   });
   const [offAnimate, setOffAnimate] = useState(true);
   const showModal = () => {
@@ -82,7 +86,7 @@ const UserInfoModal = () => {
     console.log(values, "yyyyy");
     setCurrent(current + 1);
     setFormUserYourself(values);
-    setAllFormData({ ...allFormData, selfDescribe: values.selfDescribe });
+    setAllFormData({ ...allFormData, about_me: values.about_me });
   };
 
   console.log(allFormData, "allformData");
@@ -103,26 +107,26 @@ const UserInfoModal = () => {
         />
       ),
     },
-    {
-      title: "",
-      content: (
-        <UserProfileInfo
-          onFinish={onFinishProfileUser}
-          initialValue={formUserProfile}
-          prev={prev}
-        />
-      ),
-    },
-    {
-      title: "",
-      content: (
-        <UserEducation
-          onFinish={onFinishUserEdu}
-          initialValue={formUserEdu}
-          prev={prev}
-        />
-      ),
-    },
+    // {
+    //   title: '',
+    //   content: (
+    //     <UserProfileInfo
+    //       onFinish={onFinishProfileUser}
+    //       initialValue={formUserProfile}
+    //       prev={prev}
+    //     />
+    //   ),
+    // },
+    // {
+    //   title: '',
+    //   content: (
+    //     <UserEducation
+    //       onFinish={onFinishUserEdu}
+    //       initialValue={formUserEdu}
+    //       prev={prev}
+    //     />
+    //   ),
+    // },
     {
       title: "",
       content: (
@@ -153,6 +157,12 @@ const UserInfoModal = () => {
                 <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
                   Previous
                 </Button>
+                <Button
+                  style={{ margin: "0 8px" }}
+                  onClick={() => submitData()}
+                >
+                  Submit
+                </Button>
               </div>
             </Col>
           </Row>
@@ -171,6 +181,27 @@ const UserInfoModal = () => {
     //border: `1px solid ${token.colorBorder}`,
     marginTop: 16,
   };
+
+  const [submitAuth, { isSuccess, isError }] = useUserLoginMutation();
+  const submitData = () => {
+    const userField = {
+      ...allFormData.userField,
+      date_of_birth: dayjs(allFormData?.userField?.date_of_birth).format(
+        "YYYY-MM-DD"
+      ),
+      about_me: allFormData?.about_me,
+    };
+    const authSignUp = [allFormData.partners, userField];
+    console.log(authSignUp);
+    submitAuth(authSignUp).catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    if (isSuccess) {
+      message.success("yes this is work");
+    }
+  }, [isSuccess]);
+
   return (
     <div>
       <div className="flex justify-center">

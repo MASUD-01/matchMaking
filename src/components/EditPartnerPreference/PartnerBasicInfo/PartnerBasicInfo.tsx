@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Collapse, InputNumber, Select, Slider, Space, Row, Col } from "antd";
-import "./Basic.css";
-
 const { Panel } = Collapse;
 
 function callback(key: any) {
