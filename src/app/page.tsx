@@ -5,6 +5,7 @@ import Footer from "@/components/HomePage/Footer/Footer";
 import FindSpecialSomeOne from "@/components/HomePage/FindSpecialSomeOne/FindSpecialSomeOne";
 import Service from "@/components/HomePage/Service/Service";
 import Venue from "@/components/Venue/Venue";
+import SuccessfulMarriagesCarousel from "@/components/HomePage/SuccessfulMarriagesCarousel/SuccessfulMarriagesCarousel";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
       <div className="container mx-auto my-10 h-auto">
         <Venue />
       </div>
-
+      <SuccessfulMarriagesCarousel />
       <div className="h-full min-h-[400px] bg-gradient-to-r from-[#f8f5e9] to-[#f5f5d1] mt-10 py-3">
         <FindSpecialSomeOne />
       </div>

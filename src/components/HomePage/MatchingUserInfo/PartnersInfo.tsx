@@ -29,7 +29,7 @@ const PartnersInfo = ({
         style={{ width: "100%" }}
       >
         <Row gutter={[5, 5]} justify={"center"}>
-          <Col lg={5}>
+          <Col lg={5} xs={24}>
             <Form.Item
               label={"looking for"}
               name={["partners", "desired_gender"]}
@@ -55,7 +55,7 @@ const PartnersInfo = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} xs={24}>
             <Form.Item
               label={"Select age"}
               name={["partners", "from_age"]}
@@ -72,14 +72,14 @@ const PartnersInfo = ({
             </Form.Item>
           </Col>
 
-          <Col lg={1}>
+          <Col lg={1} xs={24}>
             <Form.Item label={" "}>
               <div className="flex justify-center">
-                <ArrowRightOutlined />
+                <ArrowRightOutlined className="font-bold text-2xl rotate-90 sm:rotate-0" />
               </div>
             </Form.Item>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} xs={24}>
             <Form.Item
               label={" "}
               required={false}
@@ -101,7 +101,7 @@ const PartnersInfo = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={5}>
+          <Col lg={5} xs={24}>
             <Form.Item
               label={"Religion"}
               name={["partners", "desired_religion"]}
@@ -119,7 +119,7 @@ const PartnersInfo = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={5}>
+          <Col lg={5} xs={24}>
             <Form.Item
               label={"Living in"}
               name={["partners", "desired_country"]}
@@ -135,7 +135,7 @@ const PartnersInfo = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={5}>
+          <Col lg={5} xs={24}>
             <Form.Item
               name={["partners", "desired_community"]}
               label="Desired Community"
@@ -154,7 +154,7 @@ const PartnersInfo = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={5}>
+          <Col lg={5} xs={24}>
             <Form.Item
               name={["partners", "desired_occupation"]}
               label="Occupation"
@@ -173,7 +173,7 @@ const PartnersInfo = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} xs={24}>
             <Form.Item
               name={["partners", "desired_education"]}
               label="Desired Qualificfation"
@@ -192,7 +192,7 @@ const PartnersInfo = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} xs={24}>
             <Form.Item
               name={["partners", "desired_language"]}
               label="Preferred Language"

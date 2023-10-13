@@ -6,14 +6,14 @@ const Footer = () => {
     <div className="grid grid-cols-1 gap-y-6 sm:gap-0  sm:grid-cols-3 container mx-auto justify-center">
       <div className="space-y-5">
         <h3 className="text-white font-bold text-xl">
-          WedMeGood - Your Personal Wedding Planner
+          MatchMaking - Your Personal Wedding Planner
         </h3>
         <p>
-          Plan Your Wedding With Us WedMeGood Is An Indian Wedding Planning
+          Plan Your Wedding With Us MatchMaking Is An Indian Wedding Planning
           Website
         </p>
         <button className="border border-white-300 p-2 rounded-sm text-white">
-          Register As a Vendor
+          Register As a User
         </button>
         <div className="flex gap-2">
           <BsFacebook style={{ fontSize: "25px", color: "white" }} />

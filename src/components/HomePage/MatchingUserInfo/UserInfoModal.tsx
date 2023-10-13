@@ -89,7 +89,6 @@ const UserInfoModal = () => {
     setAllFormData({ ...allFormData, about_me: values.about_me });
   };
 
-  console.log(allFormData, "allformData");
   const steps = [
     {
       title: "",
@@ -182,26 +181,9 @@ const UserInfoModal = () => {
     marginTop: 16,
   };
 
-  const [submitAuth, { isSuccess, isError }] = useUserLoginMutation();
   const submitData = () => {
-    const userField = {
-      ...allFormData.userField,
-      date_of_birth: dayjs(allFormData?.userField?.date_of_birth).format(
-        "YYYY-MM-DD"
-      ),
-      about_me: allFormData?.about_me,
-    };
-    const authSignUp = [allFormData.partners, userField];
-    console.log(authSignUp);
-    submitAuth(authSignUp).catch((error) => console.log(error));
+    message.success("SuccessFully Submited");
   };
-
-  useEffect(() => {
-    if (isSuccess) {
-      message.success("yes this is work");
-    }
-  }, [isSuccess]);
-
   return (
     <div>
       <div className="flex justify-center">

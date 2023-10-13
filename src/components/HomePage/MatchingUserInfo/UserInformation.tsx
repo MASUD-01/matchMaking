@@ -120,7 +120,7 @@ const UserInformation = ({
             </Col>
           )} */}
 
-          <Col lg={24}>
+          <Col lg={24} xs={24}>
             <Row justify={"center"} style={{ marginTop: "20px" }}>
               <Form.Item
                 name={["userField", "photo"]}
@@ -145,7 +145,7 @@ const UserInformation = ({
             </Row>
           </Col>
 
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "username"]}
               label="Your Name"
@@ -172,7 +172,7 @@ const UserInformation = ({
               />
             </Form.Item>
           </Col> */}
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               label={"Gender"}
               name={["userField", "gender"]}
@@ -199,7 +199,7 @@ const UserInformation = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "email"]}
               label="Email"
@@ -214,7 +214,7 @@ const UserInformation = ({
               <Input size="large" placeholder="Email" type="email" />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "phone_number"]}
               label="Phone"
@@ -231,7 +231,7 @@ const UserInformation = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "date_of_birth"]}
               label="Date of Birth"
@@ -243,7 +243,7 @@ const UserInformation = ({
               <DatePicker style={{ width: "100%" }} size="large" />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "religion"]}
               label="Your Religion"
@@ -263,7 +263,7 @@ const UserInformation = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "community"]}
               label="Your Community"
@@ -283,7 +283,7 @@ const UserInformation = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["partners", "language"]}
               label="Preferred Language"
@@ -303,7 +303,7 @@ const UserInformation = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "education"]}
               label="Your highest qualificfation"
@@ -323,7 +323,7 @@ const UserInformation = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "occupation"]}
               label="Occupation"
@@ -343,7 +343,7 @@ const UserInformation = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "country"]}
               label="Living Country"
@@ -361,7 +361,7 @@ const UserInformation = ({
               />
             </Form.Item>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} xs={24}>
             <Form.Item
               name={["userField", "password_hash"]}
               label="Password"

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Row, Col, Modal } from "antd";
+import Link from "next/link";
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -20,23 +21,18 @@ const Header = () => {
       <Row
         justify={"space-between"}
         align={"middle"}
-        style={{
-          position: "absolute",
-          paddingLeft: "200px",
-          paddingRight: "200px",
-          width: "100%",
-          top: "0px",
-        }}
+        className="absolute px-6 sm:px-[150px] md:px-[200px] w-full top-0"
       >
         <Col>
-          <Image
-            width={200}
-            height={100}
-            alt="Image"
-            src={"/logo_bg_remove.png"}
-          />
+          <h2 className="text-3xl text-center sm:text-start w-[312px] sm:w-full text-white font-bold">
+            MatchMaking
+          </h2>
         </Col>
-        <Col>
+        <Col className="flex gap-x-3 text-center sm:text-start w-[312px] justify-between">
+          <Link href="/mywedding">
+            <button className="text-white text-xl">Mywedding</button>
+          </Link>
+          <button className="text-white text-xl">About Us</button>
           <button className="text-white text-xl" onClick={showModal}>
             Login
           </button>

@@ -41,7 +41,7 @@ const Venue = () => {
         {Venues.map((item, index) => (
           <div
             key={index}
-            className="relative w-full h-[180px]  max-w-[500px] overflow-hidden bg-[#d3d3d3] border border-gray-200 rounded-lg shadow group"
+            className="relative w-[300px] h-[180px] sm:w-[350px] overflow-hidden bg-[#d3d3d3] border border-gray-200 rounded-lg shadow group"
           >
             <Image
               width={500}

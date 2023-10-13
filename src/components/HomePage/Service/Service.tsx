@@ -11,7 +11,7 @@ const Service = () => {
           ervices
         </h1>
       </div>
-      <div className="h-full mx-auto gap-5 my-14 grid w-[967px] grid-cols-3">
+      <div className="h-full mx-auto gap-5 my-14 grid w-[300px] sm:w-[967px] grid-cols-1 sm:grid-cols-3">
         {/* ---------photographers------------------ */}
         <div className="flex flex-col overflow-hidden mt-7 justify-center items-center gap-y-5 rounded-2xl w-[309px] px-[32] py-[48] h-[370px] bg-[#a1cdf5]">
           <p className="text-2xl font-bold">Photographers</p>
@@ -94,7 +94,7 @@ const Service = () => {
             See More Music/Band
           </button>
         </div>
-        <div className="flex flex-col mt-[-30px] justify-center items-center gap-y-5 rounded-2xl w-[309px] px-[32] py-[48] h-[370px] bg-[#ff6e00]">
+        <div className="flex flex-col sm:mt-[-30px] justify-center items-center gap-y-5 rounded-2xl w-[309px] px-[32] py-[48] h-[370px] bg-[#ff6e00]">
           <p className="text-2xl font-bold">Beauty & Makeup</p>
           <p>Browse galleries to find your look</p>
           <div className="flex">
