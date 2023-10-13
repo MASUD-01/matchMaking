@@ -22,11 +22,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="bg-[#fff5ed] h-screen">
       <div className="sm:flex justify-between items-center bg-[#ff44cb] sm:h-14 border border-b-stone-500 sticky top-0 z-50">
-        <Link href={"/"}>
-          <div className="flex-1 text-center sm:text-start">
+        <div className="flex-1 text-center sm:text-start">
+          <Link href={"/"}>
             <span className="sm:ml-20 text-2xl text-white">MatchMaking</span>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
         <div className="flex-1 flex justify-center">
           <Tabs

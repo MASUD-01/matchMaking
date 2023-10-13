@@ -2,6 +2,7 @@ import { fonts } from "@/app/fonts";
 import Image from "next/image";
 import React from "react";
 import styles from "./service.module.css";
+import Link from "next/link";
 const Service = () => {
   return (
     <div className="mt-10">
@@ -32,10 +33,11 @@ const Service = () => {
               className="rotate-12 rounded-md"
             />
           </div>
-
-          <button className="font-bold border border-black py-2 px-4 rounded-full">
-            See photographers
-          </button>
+          <Link href="/photographers">
+            <button className="font-bold border border-black py-2 px-4 rounded-full">
+              See photographers
+            </button>
+          </Link>
         </div>
 
         {/* ---------outdoor spaces------------------ */}

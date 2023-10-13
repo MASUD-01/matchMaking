@@ -2,19 +2,14 @@
 
 import { fonts } from "@/app/fonts";
 import { Button, Col, Modal, Row, Steps, message, theme } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import PartnersInfo from "./PartnersInfo";
 import UserInformation from "./UserInformation";
-import UserProfileInfo from "./UserProfileInfo";
-import UserEducation from "./UserEducation";
 import AboutYourSelf from "./AboutYourSelf";
 import { MdOutlineFileDownloadDone } from "react-icons/md";
-import dayjs from "dayjs";
 import { MatchUserInfoType } from "@/types/types";
-import { useUserLoginMutation } from "@/redux/api/authApi";
-import { error } from "console";
-type partners = {
+export type partners = {
   gender: string;
   from_age: number;
   to_age: number;
