@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "./service.module.css";
 import Link from "next/link";
+import { Tooltip } from "antd";
 const Service = () => {
   return (
     <div className="mt-10">
@@ -44,9 +45,11 @@ const Service = () => {
         <div className={styles.imageanimation}>
           <div className="absolute text-center">
             <p className="text-2xl text-white text-center">Outdoor Spaces</p>
-            <button className=" text-white border-b-[2px] z-50">
-              See outdoor spaces
-            </button>
+            <Link href={"/outdoorspaces"}>
+              <button className=" text-white border-b-[2px] z-50">
+                See outdoor spaces
+              </button>
+            </Link>
           </div>
         </div>
         {/* --------Cakes------------------ */}
@@ -69,9 +72,11 @@ const Service = () => {
               className="rotate-12 rounded-md"
             />
           </div>
-          <button className="font-bold border border-black py-2 px-4 rounded-full">
-            Browse Cakes
-          </button>
+          <Link href={"/cakes"}>
+            <button className="font-bold border border-black py-2 px-4 rounded-full">
+              Browse Cakes
+            </button>
+          </Link>
         </div>
         <div className="flex flex-col justify-center items-center gap-y-5 rounded-2xl w-[309px] px-[32] py-[48] h-[370px] bg-[#a1cdf5]">
           <p className="text-2xl font-bold">Music/Band</p>
@@ -92,9 +97,11 @@ const Service = () => {
               className="rotate-12 rounded-md"
             />
           </div>
-          <button className="font-bold border border-black py-2 px-4 rounded-full">
-            See More Music/Band
-          </button>
+          <Tooltip placement="topLeft" title={"coming soon this feature"}>
+            <button className="font-bold border border-black py-2 px-4 rounded-full">
+              See More Music/Band
+            </button>
+          </Tooltip>
         </div>
         <div className="flex flex-col sm:mt-[-30px] justify-center items-center gap-y-5 rounded-2xl w-[309px] px-[32] py-[48] h-[370px] bg-[#ff6e00]">
           <p className="text-2xl font-bold">Beauty & Makeup</p>
@@ -115,10 +122,11 @@ const Service = () => {
               className="rotate-12 rounded-md"
             />
           </div>
-
-          <button className="font-bold border border-black py-2 px-4 rounded-full">
-            See Beauty&Makeup
-          </button>
+          <Tooltip placement="topLeft" title={"coming soon this feature"}>
+            <button className="font-bold border border-black py-2 px-4 rounded-full">
+              See Beauty&Makeup
+            </button>
+          </Tooltip>
         </div>
         <div className="flex flex-col justify-center items-center gap-y-5 rounded-2xl w-[309px] px-[32] py-[48] h-[370px] bg-[#a1cdf5]">
           <p className="text-2xl font-bold">Catering</p>
@@ -139,9 +147,11 @@ const Service = () => {
               className="rotate-12 rounded-md"
             />
           </div>
-          <button className="font-bold border border-black py-2 px-4 rounded-full">
-            Views Catering
-          </button>
+          <Tooltip placement="topLeft" title={"coming soon this feature"}>
+            <button className="font-bold border border-black py-2 px-4 rounded-full">
+              Views Catering
+            </button>
+          </Tooltip>
         </div>
       </div>
     </div>

@@ -4,17 +4,17 @@ const Profile = () => {
   return (
     <div>
       <div>
-        <div className="flex justify-center border rounded-lg bg-gradient-to-r from-pink-200 via-red-400 to-orange-200 shadow-lg mx-4 my-3 py-3">
+        <div className="sm:flex justify-center border rounded-lg bg-gradient-to-r from-pink-200 via-red-400 to-orange-200 shadow-lg mx-4 my-3 py-3">
           <span className="text-zinc-100 font-bold text-xl">
             Shazzad Auncon
           </span>
         </div>
         {/* div for Age,height etc & my profile info starts*/}
-        <div className="flex  pb-3">
+        <div className="sm:flex  pb-3">
           {/* age,height info & My profile */}
           <div className="px-4">
             {/* age,height info */}
-            <div className="flex justify-between">
+            <div className="sm:flex justify-between">
               {/* div for left side */}
               <div>
                 <div>
@@ -56,12 +56,12 @@ const Profile = () => {
 
             {/* Manage your Profile */}
             <div className="border-2 rounded-lg mt-5">
-              <div className="flex flex-col justify-around px-3 py-3">
+              <div className="sm:flex flex-col justify-around px-3 py-3">
                 <div className="border-b-2 pb-3">
                   <span>Manage your Profile</span>
                 </div>
                 {/* My profile edit */}
-                <div className="flex justify-between gap-96 mt-3 ">
+                <div className="sm:flex justify-between sm:gap-96 mt-3 ">
                   <div className="flex flex-col">
                     <span className="hover:text-blue-600">
                       <a href="as">&#x2022; Edit Personal Profile</a>

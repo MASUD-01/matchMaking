@@ -1,10 +1,10 @@
-import Outdoorspaces from "@/components/Outdoorspaces/Outdoorspaces";
+import Cakes from "@/components/Cakes/Cakes";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <Outdoorspaces />
+      <Cakes />
     </div>
   );
 };
